@@ -93,13 +93,13 @@ namespace _2023
                         Console.Clear();
                         Console.CursorVisible = true;
 
-                        solutions[idx].Run();
+                        solutions[idx].RunWithTimer();
 
                         Console.CursorVisible = false;
 
-                        Console.Write("\nPress a key to exit");
+                        Console.Write("\nPress a key to return to the home menu");
                         Console.ReadKey();
-                        Environment.Exit(1);
+                        Console.Clear();
                         break;
                 }
 

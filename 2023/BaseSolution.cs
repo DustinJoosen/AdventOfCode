@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -19,6 +20,21 @@ namespace _2023
         /// Invokable method that will work with other classes to solve the puzzles.
         /// </summary>
         public abstract void Run();
+
+        /// <summary>
+        /// Invokes the Run method, but also inserts the time it took to run at the end.
+        /// </summary>
+        public void RunWithTimer()
+        {
+            Stopwatch stopwatch = new();
+            stopwatch.Start();
+
+            this.Run();
+
+            stopwatch.Stop();
+            Console.WriteLine($"This solution took {stopwatch.ElapsedMilliseconds} milliseconds to run!");
+        }
+
 
         /// <summary>
         /// Returns the displayable name set in the Display attribute on each child.
