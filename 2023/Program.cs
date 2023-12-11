@@ -19,6 +19,9 @@ List<BaseSolution> solutions = [
     new _2023.Day08.Part2.Solution(),
     new _2023.Day09.Part1.Solution(),
     new _2023.Day09.Part2.Solution(),
+    new _2023.Day10.Part1.Solution(),
+    new _2023.Day11.Part1.Solution(),
+    new _2023.Day11.Part2.Solution(),
 ];
 
 CLIMenu.Run(solutions, reverse: true);
